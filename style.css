@@ -1,0 +1,1296 @@
+
+/* =================================
+   1. COMMON STYLES
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fffaf3;
+}
+
+/* =================================
+   2. NAVBAR AND LOGO
+================================= */
+
+.main-nav {
+    width: 100%;
+    padding: 18px 6%;
+    background: linear-gradient(120deg, #35101A, #641F30);
+    border-bottom: 2px solid #C5A15B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 20px rgba(40, 10, 20, 0.25);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo-icon {
+    color: #E3C17C;
+    font-size: 35px;
+}
+
+.logo strong {
+    display: block;
+    color: #E3C17C;
+    font-family: Georgia, serif;
+    font-size: 19px;
+    letter-spacing: 1px;
+}
+
+.logo small {
+    display: block;
+    color: #FFF8EE;
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-top: 4px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #FFF8EE;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: #E3C17C;
+    transform: translateY(-2px);
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #E3C17C;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links .nav-enquiry {
+    background: #C5A15B;
+    color: #35101A;
+    padding: 11px 20px;
+    border-radius: 4px;
+}
+
+.nav-links .nav-enquiry:hover {
+    background: #FFF8EE;
+    color: #35101A;
+}
+
+/* Menu Button */
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #E3C17C;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+/* =================================
+   3. HOME PAGE
+================================= */
+
+.home-section {
+    min-height: 88vh;
+    background:
+        linear-gradient(
+            rgba(30, 10, 10, 0.65),
+            rgba(30, 10, 10, 0.65)
+        ),
+        url("images/catering.jpg");
+
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.home-content {
+    max-width: 900px;
+    padding: 35px 20px;
+    color: white;
+    animation: fadeUp 1.2s ease;
+}
+
+.home-tagline {
+    color: #E3C17C;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 22px;
+}
+
+.home-content h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(38px, 5vw, 65px);
+    letter-spacing: 1px;
+    line-height: 1.2;
+    color: #E3C17C;
+    margin-bottom: 22px;
+    text-shadow: 2px 3px 12px rgba(0, 0, 0, 0.4);
+}
+
+.gold-line {
+    width: 100px;
+    height: 3px;
+    background: #E3C17C;
+    margin: 0 auto 25px;
+    animation: lineGrow 1.5s ease;
+}
+
+.home-content h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(23px, 3vw, 34px);
+    color: #FFF1D6;
+    line-height: 1.4;
+    margin-bottom: 22px;
+    animation: fadeUp 1.3s ease;
+}
+
+.home-content p {
+    max-width: 720px;
+    margin: 0 auto 16px;
+    font-size: 16px;
+    line-height: 1.9;
+    color: #F8F0E7;
+    animation: fadeUp 1.5s ease;
+}
+
+.home-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px 38px;
+    background: #C5A15B;
+    color: #4a1720;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    box-shadow: 0 5px 18px rgba(197, 161, 91, 0.3);
+}
+
+.home-button:hover {
+    background: white;
+    transform: translateY(-3px);
+    letter-spacing: 1.5px;
+    box-shadow: 0 8px 25px rgba(197, 161, 91, 0.5);
+}
+
+/* =================================
+   4. ABOUT PAGE
+================================= */
+
+.about-section {
+    padding: 70px 8%;
+    background: #fffaf3;
+}
+
+.about-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.about-heading h1 {
+    color: #5b1825;
+    font-family: Georgia, serif;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.about-heading p {
+    color: #b58a45;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.about-content {
+    max-width: 950px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    text-align: center;
+}
+
+.about-content h2 {
+    color: #5b1825;
+    font-family: Georgia, serif;
+    margin: 25px 0 15px;
+}
+
+.about-content p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* Brand Section */
+
+.brand-section {
+    padding: 60px 7%;
+    background: #f3e9df;
+    text-align: center;
+}
+
+.brand-section > h2 {
+    color: #5b1825;
+    font-family: Georgia, serif;
+    font-size: 30px;
+    margin: 35px 0;
+}
+
+.brand-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.brand-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    border-bottom: 4px solid #C5A15B;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+    transition: 0.3s;
+}
+
+.brand-card:hover {
+    transform: translateY(-6px);
+}
+
+.brand-card h3 {
+    color: #7b3540;
+    margin-bottom: 15px;
+    font-size: 19px;
+}
+
+.brand-card p {
+    color: #666;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+/* =================================
+   5. FOOTER
+================================= */
+
+footer {
+    background: #3d101a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* =================================
+   6. ANIMATIONS
+================================= */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes lineGrow {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100px;
+    }
+}
+
+/* =================================
+   7. TABLET AND MOBILE
+================================= */
+
+@media (max-width: 768px) {
+
+    .main-nav {
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-nav .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 250px;
+        background: #401522;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 15px;
+        box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+    }
+
+    .main-nav .nav-links.active {
+        display: flex;
+    }
+
+    .main-nav .nav-links a {
+        padding: 14px;
+        border-bottom: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .main-nav .nav-links .nav-enquiry {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .home-tagline {
+        letter-spacing: 3px;
+        font-size: 11px;
+    }
+
+    .home-content h1 {
+        font-size: 36px;
+    }
+
+    .home-content h2 {
+        font-size: 23px;
+    }
+
+    .brand-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-heading h1 {
+        font-size: 32px;
+    }
+}
+
+/* Small Mobile */
+
+@media (max-width: 500px) {
+
+    .brand-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content {
+        padding: 25px 18px;
+    }
+}
+
+/* =================================
+   SERVICES PAGE
+================================= */
+
+.services-section {
+    padding: 70px 7%;
+    background: #fffaf3;
+}
+
+.page-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-heading h1 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    color: #5b1825;
+    margin-bottom: 15px;
+}
+
+.page-heading p {
+    color: #b58a45;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+.services-container {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background: white;
+    padding: 35px 25px;
+    text-align: center;
+    border-radius: 10px;
+    border-bottom: 4px solid #c5a15b;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    transition: 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(91,24,37,0.15);
+}
+
+.service-card h3 {
+    color: #641f30;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #666;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.service-note {
+    max-width: 850px;
+    margin: 40px auto;
+    text-align: center;
+    color: #777;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+.service-formats {
+    margin-top: 70px;
+    text-align: center;
+}
+
+.service-formats h2 {
+    color: #5b1825;
+    font-family: Georgia, serif;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.formats-container {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.format-card {
+    background: #f3e9df;
+    padding: 30px 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.format-card:hover {
+    transform: translateY(-6px);
+    background: #eee0d0;
+}
+
+.format-card h3 {
+    color: #641f30;
+    margin-bottom: 12px;
+}
+
+.format-card p {
+    color: #666;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+/* Services Responsive Design */
+
+@media (max-width: 768px) {
+    .services-container,
+    .formats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .page-heading h1 {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 500px) {
+    .services-container,
+    .formats-container {
+        grid-template-columns: 1fr;
+    }
+
+    .services-section {
+        padding: 45px 20px;
+    }
+
+    .page-heading h1 {
+        font-size: 30px;
+    }
+}
+
+/* =================================
+   MENU PAGE
+================================= */
+
+.menu-section {
+    padding: 70px 7%;
+    background: #fffaf3;
+    min-height: 80vh;
+}
+
+.menu-container {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.menu-card {
+    background: white;
+    padding: 35px 25px;
+    text-align: center;
+    border-radius: 12px;
+    border-bottom: 4px solid #c5a15b;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    transition: 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(91,24,37,0.15);
+}
+
+.menu-icon {
+    font-size: 38px;
+    margin-bottom: 18px;
+}
+
+.menu-card h2 {
+    color: #641f30;
+    font-family: Georgia, serif;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.menu-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.menu-note {
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+    margin: 40px auto 0;
+    line-height: 1.7;
+}
+
+/* Menu Responsive Design */
+
+@media (max-width: 768px) {
+    .menu-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-section {
+        padding: 45px 20px;
+    }
+}
+
+/* =================================
+   CONTACT PAGE
+================================= */
+
+.contact-section {
+    padding: 70px 7%;
+    background: #fffaf3;
+    min-height: 80vh;
+}
+
+.contact-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.contact-card {
+    background: white;
+    padding: 35px 25px;
+    text-align: center;
+    border-radius: 12px;
+    border-bottom: 4px solid #c5a15b;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    transition: 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(91,24,37,0.15);
+}
+
+.contact-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.contact-card h2 {
+    color: #641f30;
+    font-family: Georgia, serif;
+    margin-bottom: 15px;
+}
+
+.contact-card p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    overflow-wrap: anywhere;
+}
+
+.contact-card a {
+    display: inline-block;
+    background: #641f30;
+    color: white;
+    padding: 10px 22px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.contact-card a:hover {
+    background: #c5a15b;
+    color: #35101a;
+}
+
+.service-location {
+    margin: 55px auto 0;
+    text-align: center;
+    background: #f3e9df;
+    padding: 30px 20px;
+    border-radius: 10px;
+    max-width: 900px;
+}
+
+.service-location h2 {
+    color: #641f30;
+    font-family: Georgia, serif;
+    margin-bottom: 15px;
+}
+
+.service-location p {
+    color: #666;
+    line-height: 1.8;
+}
+
+/* Contact Responsive Design */
+
+@media (max-width: 600px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-section {
+        padding: 45px 20px;
+    }
+}
+
+/* =================================
+   ENQUIRY PAGE
+================================= */
+
+.enquiry-section {
+    padding: 70px 7%;
+    background: #fffaf3;
+    min-height: 85vh;
+}
+
+.enquiry-container {
+    max-width: 850px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    border-top: 4px solid #c5a15b;
+}
+
+.enquiry-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.form-group label {
+    color: #641f30;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    outline: none;
+    background: #fffdf9;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #c5a15b;
+    box-shadow: 0 0 6px rgba(197,161,91,0.25);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.enquiry-button {
+    grid-column: 1 / -1;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background: #641f30;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.enquiry-button:hover {
+    background: #c5a15b;
+    color: #35101a;
+    transform: translateY(-3px);
+}
+
+/* Enquiry Responsive Design */
+
+@media (max-width: 600px) {
+    .enquiry-section {
+        padding: 45px 18px;
+    }
+
+    .enquiry-container {
+        padding: 25px 18px;
+    }
+
+    .enquiry-form {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width,
+    .enquiry-button {
+        grid-column: 1;
+    }
+}
+/* ------------------------------------------------ */
+
+/* ABOUT PAGE */
+
+.about-section {
+    padding: 45px 7%;
+    background: #fffaf2;
+}
+
+.about-heading,
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.about-heading h1 {
+    color: #641d2d;
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.about-heading p {
+    color: #666;
+    margin-top: 12px;
+}
+
+.gold-line {
+    width: 65px;
+    height: 3px;
+    background: #c49a45;
+    margin: 0 auto;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    color: #641d2d;
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+.about-text p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.locations {
+    margin-top: 22px;
+    padding: 17px;
+    background: #f4ead9;
+    border-left: 3px solid #c49a45;
+}
+
+.locations h3 {
+    color: #641d2d;
+    margin-bottom: 8px;
+}
+
+.locations p {
+    margin-bottom: 0;
+}
+
+/* WHO WE SERVE */
+
+.brand-section,
+.focus-section {
+    padding: 45px 7%;
+    background: #fff;
+}
+
+.focus-section {
+    background: #fffaf2;
+}
+
+.section-heading h2 {
+    color: #641d2d;
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.brand-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.brand-card {
+    background: #fff;
+    padding: 25px 18px;
+    text-align: center;
+    border-bottom: 3px solid #c49a45;
+    border-radius: 6px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+    transition: 0.3s;
+}
+
+.brand-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.10);
+}
+
+.brand-card h3 {
+    color: #641d2d;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.brand-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/* BRAND FOCUS - THREE CARDS */
+
+.focus-section .brand-container {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 900px) {
+    .brand-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .about-image,
+    .about-text {
+        width: 100%;
+    }
+
+    .about-image img {
+        height: 260px;
+    }
+
+    .about-heading h1 {
+        font-size: 28px;
+    }
+
+    .about-text h2 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 500px) {
+    .about-section,
+    .brand-section,
+    .focus-section {
+        padding: 35px 5%;
+    }
+
+    .brand-container,
+    .focus-section .brand-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image img {
+        height: 220px;
+    }
+}
+
+
+/* SERVICES PAGE */
+
+.services-section {
+    padding: 45px 7%;
+    background: #fffaf2;
+}
+
+.services-section .page-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.services-section .page-heading h1 {
+    color: #641d2d;
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.services-section .page-heading p {
+    color: #666;
+    margin-top: 12px;
+}
+
+/* SERVICE CARDS */
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 7px;
+    overflow: hidden;
+    border-bottom: 3px solid #c49a45;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.10);
+}
+
+.service-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+}
+
+.service-card-content {
+    padding: 20px;
+}
+
+.service-card h3 {
+    color: #641d2d;
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* SERVICE NOTE */
+
+.service-note {
+    max-width: 900px;
+    margin: 30px auto 0;
+    padding: 16px;
+    text-align: center;
+    background: #f4ead9;
+    color: #641d2d;
+    border-left: 3px solid #c49a45;
+    line-height: 1.7;
+}
+
+/* CATERING FORMATS */
+
+.service-formats {
+    padding: 45px 7%;
+    background: #fff;
+}
+
+.formats-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.formats-heading h2 {
+    color: #641d2d;
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.formats-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.format-card {
+    background: #fffaf2;
+    padding: 25px 20px;
+    text-align: center;
+    border-bottom: 3px solid #c49a45;
+    border-radius: 6px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.format-card:hover {
+    transform: translateY(-4px);
+}
+
+.format-card h3 {
+    color: #641d2d;
+    margin-bottom: 12px;
+}
+
+.format-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .services-section,
+    .service-formats {
+        padding: 35px 5%;
+    }
+
+    .services-section .page-heading h1 {
+        font-size: 28px;
+    }
+
+    .service-card img {
+        height: 170px;
+    }
+}
+
+@media (max-width: 550px) {
+    .services-container,
+    .formats-container {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card img {
+        height: 210px;
+    }
+}
+
+
+.menu-icon {
+    font-size: 42px;
+    width: 75px;
+    height: 75px;
+    margin: 25px auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f4ead9;
+    border-radius: 50%;
+}
+
+.menu-card {
+    text-align: center;
+    min-height: 220px;
+}
+
+/* =================================
+   COMMON BACKGROUND IMAGE
+   ABOUT, SERVICES, MENU, CONTACT, ENQUIRY
+================================= */
+
+body {
+    background:
+        linear-gradient(
+            rgba(255, 250, 242, 0.40),
+            rgba(255, 250, 242, 0.40)
+        ),
+        url("images/catering.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Page backgrounds */
+
+.about-section,
+.services-section,
+.menu-section,
+.contact-section,
+.enquiry-section {
+    background: rgba(255, 250, 242, 0.72);
+}
+
+/* About page sections */
+
+.brand-section,
+.focus-section {
+    background: rgba(255, 250, 242, 0.72);
+}
+
+/* Services formats section */
+
+.service-formats {
+    background: rgba(255, 250, 242, 0.72);
+}
+
+/* Keep cards white */
+
+.about-content,
+.brand-card,
+.service-card,
+.menu-card,
+.contact-card,
+.enquiry-container {
+    background-color: #fff;
+}
