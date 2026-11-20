@@ -1,7 +1,7 @@
 
-/* =================================
+/* =========================================
    1. COMMON STYLES
-================================= */
+========================================= */
 
 * {
     margin: 0;
@@ -16,11 +16,12 @@ html {
 body {
     font-family: Arial, sans-serif;
     background: #fffaf3;
+    color: #555;
 }
 
-/* =================================
-   2. NAVBAR AND LOGO
-================================= */
+/* =========================================
+   2. COMMON NAVBAR
+========================================= */
 
 .main-nav {
     width: 100%;
@@ -113,8 +114,6 @@ body {
     color: #35101A;
 }
 
-/* Menu Button */
-
 .menu-toggle {
     display: none;
     background: transparent;
@@ -122,20 +121,750 @@ body {
     color: #E3C17C;
     font-size: 30px;
     cursor: pointer;
-    padding: 5px 10px;
 }
 
+/* =========================================
+   3. COMMON PAGE BACKGROUND
+========================================= */
+
+.about-section,
+.brand-section,
+.services-section,
+.service-formats,
+.menu-section,
+.contact-section,
+.enquiry-section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Individual page backgrounds */
+
+.about-section {
+    background-image:
+        linear-gradient(rgba(255,250,242,0.82), rgba(255,250,242,0.82)),
+        url("images/about.jpg");
+}
+
+.brand-section {
+    background-image:
+        linear-gradient(rgba(255,250,242,0.82), rgba(255,250,242,0.82)),
+        url("images/about.jpg");
+}
+
+.services-section,
+.service-formats {
+    background-image:
+        linear-gradient(rgba(255,250,242,0.78), rgba(255,250,242,0.78)),
+        url("images/services.jpg");
+}
+
+.menu-section {
+    background-image:
+        linear-gradient(rgba(255,250,242,0.78), rgba(255,250,242,0.78)),
+        url("images/menu.jpg");
+}
+
+.contact-section {
+    background-image:
+        linear-gradient(rgba(255,250,242,0.78), rgba(255,250,242,0.78)),
+        url("images/contact.jpg");
+}
+
+.enquiry-section {
+    background-image:
+        linear-gradient(rgba(255,250,242,0.78), rgba(255,250,242,0.78)),
+        url("images/enquiry.jpg");
+}
+
+/* Common cards */
+
+.about-content,
+.brand-card,
+.service-card,
+.menu-card,
+.contact-card,
+.enquiry-container {
+    background: #fff;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    transition: 0.3s ease;
+}
+
+/* Common headings */
+
+.page-heading,
+.about-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.page-heading h1,
+.about-heading h1 {
+    color: #5b1825;
+    font-family: Georgia, serif;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.page-heading p,
+.about-heading p {
+    color: #b58a45;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+.gold-line {
+    width: 65px;
+    height: 3px;
+    background: #C5A15B;
+    margin: 15px auto;
+}
+
+/* =========================================
+   4. HOME PAGE
+========================================= */
+
 /* =================================
-   3. HOME PAGE
+   PREMIUM HOME HERO
 ================================= */
+
+.home-section {
+    min-height: 92vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px 80px;
+    overflow: hidden;
+
+    background:
+        linear-gradient(rgba(30, 5, 12, 0.72), rgba(30, 5, 12, 0.72)),
+        url("images/catering.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.home-content {
+    position: relative;
+    z-index: 2;
+    max-width: 950px;
+    padding: 35px 20px;
+    color: white;
+    animation: fadeUp 1.2s ease;
+}
+
+.home-label {
+    display: inline-block;
+    color: #E3C17C;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+    padding: 11px 22px;
+    border: 1px solid rgba(227, 193, 124, 0.7);
+    border-radius: 30px;
+}
+
+.home-tagline {
+    color: #FFF1D6;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+.home-content h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: 1.15;
+    color: #E3C17C;
+    margin-bottom: 20px;
+}
+
+.home-content h1 span {
+    display: block;
+    color: #FFF1D6;
+}
+
+.gold-line {
+    width: 75px;
+    height: 3px;
+    background: #C5A15B;
+    margin: 22px auto;
+}
+
+.home-content h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(22px, 3vw, 32px);
+    color: #FFF1D6;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.home-description {
+    max-width: 700px;
+    margin: 0 auto 12px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #F8F0E7;
+}
+
+.hero-buttons {
+    margin-top: 28px;
+}
+
+.home-button,
+.home-outline-button {
+    display: inline-block;
+    margin: 8px;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+}
+
+.home-button {
+    background: #C5A15B;
+    color: #35101A;
+    border: 1px solid #C5A15B;
+}
+
+.home-button:hover {
+    background: #FFF1D6;
+    border-color: #FFF1D6;
+    transform: translateY(-4px);
+}
+
+.home-outline-button {
+    border: 1px solid #E3C17C;
+    color: #FFF1D6;
+}
+
+.home-outline-button:hover {
+    background: #C5A15B;
+    color: #35101A;
+    transform: translateY(-4px);
+}
+
+.hero-bottom-text {
+    margin-top: 45px;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #FFF1D6;
+}
+
+.hero-bottom-text span {
+    color: #E3C17C;
+    padding: 0 10px;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #E3C17C;
+    font-size: 28px;
+    text-decoration: none;
+    animation: bounce 1.5s infinite;
+}
+
+
+/* =================================
+   SECTION COMMON STYLES
+================================= */
+
+.section-label {
+    color: #A77B35;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 45px;
+}
+
+.section-heading h2,
+.welcome-content h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(30px, 4vw, 43px);
+    color: #35101A;
+    line-height: 1.3;
+}
+
+.section-heading h2 span,
+.welcome-content h2 span,
+.cta-content h2 span {
+    color: #B18A48;
+}
+
+.section-heading p:not(.section-label) {
+    color: #76666A;
+    line-height: 1.8;
+    margin-top: 12px;
+}
+
+
+/* =================================
+   WELCOME SECTION
+================================= */
+
+.welcome-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+    padding: 100px 9%;
+    background: #FFF9F0;
+}
+
+.welcome-image {
+    position: relative;
+    min-height: 420px;
+}
+
+.welcome-image img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 15px 15px 0 #E8D7B8;
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: #35101A;
+    color: white;
+    padding: 18px 25px;
+}
+
+.image-caption span {
+    display: block;
+    color: #E3C17C;
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+}
+
+.image-caption strong {
+    font-family: Georgia, serif;
+    font-size: 20px;
+}
+
+.welcome-content h2 {
+    margin-bottom: 15px;
+}
+
+.welcome-content .gold-line {
+    margin: 20px 0;
+}
+
+.welcome-content p:not(.section-label) {
+    color: #716166;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 17px;
+}
+
+.section-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 14px 25px;
+    background: #35101A;
+    color: #FFF1D6;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.section-button:hover {
+    background: #C5A15B;
+    color: #35101A;
+    transform: translateY(-3px);
+}
+
+
+/* =================================
+   HOME SERVICES
+================================= */
+
+.home-services {
+    padding: 95px 8%;
+    background: #F5EDE2;
+}
+
+.home-service-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.home-service-card {
+    background: #FFFCF7;
+    padding: 35px 25px;
+    text-align: center;
+    border-bottom: 3px solid #C5A15B;
+    box-shadow: 0 8px 25px rgba(53, 16, 26, 0.06);
+    transition: 0.35s;
+}
+
+.home-service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(53, 16, 26, 0.13);
+}
+
+.service-symbol {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #F1E4CC;
+    color: #8D672D;
+    font-size: 27px;
+}
+
+.home-service-card h3 {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    color: #35101A;
+    margin-bottom: 15px;
+}
+
+.home-service-card p {
+    color: #76666A;
+    font-size: 14px;
+    line-height: 1.8;
+    min-height: 100px;
+}
+
+.home-service-card a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #9A7136;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.home-service-card a:hover {
+    color: #35101A;
+}
+
+
+/* =================================
+   WHY CHOOSE US
+================================= */
+
+.why-section {
+    padding: 95px 9%;
+    background: #FFF9F0;
+}
+
+.why-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.why-card {
+    padding: 35px 30px;
+    background: white;
+    border: 1px solid #E9DDC9;
+    transition: 0.3s;
+}
+
+.why-card:hover {
+    border-color: #C5A15B;
+    transform: translateY(-6px);
+}
+
+.why-card span {
+    font-family: Georgia, serif;
+    font-size: 35px;
+    color: #C5A15B;
+}
+
+.why-card h3 {
+    color: #35101A;
+    font-family: Georgia, serif;
+    font-size: 21px;
+    margin: 18px 0 12px;
+}
+
+.why-card p {
+    color: #76666A;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =================================
+   FOOD GALLERY
+================================= */
+
+.food-showcase {
+    padding: 95px 8%;
+    background: #F5EDE2;
+}
+
+.food-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.food-gallery-item {
+    height: 320px;
+    position: relative;
+    overflow: hidden;
+    background: #35101A;
+}
+
+.food-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.food-gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.food-gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 22px 15px;
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    background: linear-gradient(transparent, rgba(30, 5, 12, 0.9));
+}
+
+.gallery-link {
+    text-align: center;
+    margin-top: 35px;
+}
+
+
+/* =================================
+   HOME CALL TO ACTION
+================================= */
+
+.home-cta {
+    padding: 95px 20px;
+    text-align: center;
+    background:
+        linear-gradient(rgba(35, 8, 16, 0.88), rgba(35, 8, 16, 0.88)),
+        url("images/catering.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.cta-content {
+    max-width: 750px;
+    margin: auto;
+}
+
+.cta-content .section-label {
+    color: #E3C17C;
+}
+
+.cta-content h2 {
+    color: #FFF1D6;
+    font-family: Georgia, serif;
+    font-size: clamp(32px, 5vw, 48px);
+    margin-bottom: 20px;
+}
+
+.cta-content p:not(.section-label) {
+    color: #F8F0E7;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+
+/* =================================
+   ANIMATIONS
+================================= */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translate(-50%, 0);
+    }
+    50% {
+        transform: translate(-50%, 8px);
+    }
+}
+
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 1000px) {
+    .home-service-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .welcome-section {
+        gap: 40px;
+        padding: 80px 6%;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-section {
+        min-height: 85vh;
+        padding: 85px 15px 65px;
+        background-attachment: scroll;
+    }
+
+    .home-content {
+        padding: 20px 8px;
+    }
+
+    .home-label {
+        font-size: 10px;
+        letter-spacing: 2px;
+        padding: 9px 13px;
+    }
+
+    .home-tagline {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .home-content h1 {
+        font-size: clamp(38px, 10vw, 55px);
+    }
+
+    .home-content h2 {
+        font-size: 22px;
+    }
+
+    .home-description {
+        font-size: 14px;
+    }
+
+    .hero-bottom-text {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .welcome-section {
+        grid-template-columns: 1fr;
+        padding: 65px 7%;
+        gap: 45px;
+    }
+
+    .welcome-image {
+        min-height: 300px;
+    }
+
+    .welcome-image img {
+        height: 300px;
+    }
+
+    .home-services,
+    .why-section,
+    .food-showcase {
+        padding: 70px 6%;
+    }
+
+    .home-service-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .home-service-card {
+        padding: 25px 15px;
+    }
+
+    .home-service-card p {
+        min-height: auto;
+    }
+
+    .why-container {
+        grid-template-columns: 1fr;
+    }
+
+    .food-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .food-gallery-item {
+        height: 280px;
+    }
+
+    .home-cta {
+        padding: 75px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-service-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons a {
+        display: block;
+        width: 90%;
+        max-width: 280px;
+        margin: 12px auto;
+    }
+
+    .section-heading h2,
+    .welcome-content h2 {
+        font-size: 30px;
+    }
+
+    .image-caption {
+        left: 12px;
+        bottom: 12px;
+        padding: 14px 18px;
+    }
+}
 
 .home-section {
     min-height: 88vh;
     background:
-        linear-gradient(
-            rgba(30, 10, 10, 0.65),
-            rgba(30, 10, 10, 0.65)
-        ),
+        linear-gradient(rgba(30,10,10,0.65), rgba(30,10,10,0.65)),
         url("images/catering.jpg");
 
     background-size: cover;
@@ -145,8 +874,6 @@ body {
     align-items: center;
     text-align: center;
     padding: 60px 20px;
-    position: relative;
-    overflow: hidden;
 }
 
 .home-content {
@@ -154,6 +881,15 @@ body {
     padding: 35px 20px;
     color: white;
     animation: fadeUp 1.2s ease;
+}
+
+.home-label {
+    display: block;
+    color: #E3C17C;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
 }
 
 .home-tagline {
@@ -167,19 +903,14 @@ body {
 .home-content h1 {
     font-family: Georgia, serif;
     font-size: clamp(38px, 5vw, 65px);
-    letter-spacing: 1px;
     line-height: 1.2;
     color: #E3C17C;
     margin-bottom: 22px;
-    text-shadow: 2px 3px 12px rgba(0, 0, 0, 0.4);
+    text-shadow: 2px 3px 12px rgba(0,0,0,0.4);
 }
 
-.gold-line {
-    width: 100px;
-    height: 3px;
-    background: #E3C17C;
-    margin: 0 auto 25px;
-    animation: lineGrow 1.5s ease;
+.home-content h1 span {
+    color: #FFF1D6;
 }
 
 .home-content h2 {
@@ -188,7 +919,6 @@ body {
     color: #FFF1D6;
     line-height: 1.4;
     margin-bottom: 22px;
-    animation: fadeUp 1.3s ease;
 }
 
 .home-content p {
@@ -197,7 +927,6 @@ body {
     font-size: 16px;
     line-height: 1.9;
     color: #F8F0E7;
-    animation: fadeUp 1.5s ease;
 }
 
 .home-button {
@@ -213,70 +942,73 @@ body {
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: 0.3s;
-    box-shadow: 0 5px 18px rgba(197, 161, 91, 0.3);
 }
 
 .home-button:hover {
     background: white;
     transform: translateY(-3px);
-    letter-spacing: 1.5px;
-    box-shadow: 0 8px 25px rgba(197, 161, 91, 0.5);
 }
 
-/* =================================
-   4. ABOUT PAGE
-================================= */
+/* =========================================
+   5. ABOUT PAGE
+========================================= */
 
 .about-section {
     padding: 70px 8%;
-    background: #fffaf3;
-}
-
-.about-heading {
-    text-align: center;
-    margin-bottom: 45px;
-}
-
-.about-heading h1 {
-    color: #5b1825;
-    font-family: Georgia, serif;
-    font-size: 40px;
-    margin-bottom: 20px;
-}
-
-.about-heading p {
-    color: #b58a45;
-    font-size: 18px;
-    letter-spacing: 2px;
 }
 
 .about-content {
-    max-width: 950px;
+    max-width: 1150px;
     margin: auto;
-    background: white;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
-    text-align: center;
+    padding: 35px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
-.about-content h2 {
-    color: #5b1825;
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    color: #641d2d;
     font-family: Georgia, serif;
-    margin: 25px 0 15px;
+    font-size: 25px;
+    margin-bottom: 18px;
 }
 
-.about-content p {
+.about-text p {
     color: #555;
     line-height: 1.8;
     margin-bottom: 15px;
 }
 
-/* Brand Section */
+.locations {
+    margin-top: 22px;
+    padding: 17px;
+    background: #f4ead9;
+    border-left: 3px solid #c49a45;
+}
+
+.locations h3 {
+    color: #641d2d;
+    margin-bottom: 8px;
+}
 
 .brand-section {
     padding: 60px 7%;
-    background: #f3e9df;
     text-align: center;
 }
 
@@ -288,20 +1020,17 @@ body {
 }
 
 .brand-container {
-    max-width: 1100px;
-    margin: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 22px;
+    max-width: 1100px;
+    margin: auto;
 }
 
 .brand-card {
-    background: white;
     padding: 30px 20px;
     border-radius: 10px;
     border-bottom: 4px solid #C5A15B;
-    box-shadow: 0 5px 18px rgba(0,0,0,0.07);
-    transition: 0.3s;
 }
 
 .brand-card:hover {
@@ -320,274 +1049,126 @@ body {
     font-size: 14px;
 }
 
-/* =================================
-   5. FOOTER
-================================= */
-
-footer {
-    background: #3d101a;
-    color: white;
+.focus-section {
+    padding: 60px 7%;
     text-align: center;
-    padding: 20px;
-    font-size: 14px;
+    background: rgba(255,250,242,0.85);
 }
 
-/* =================================
-   6. ANIMATIONS
-================================= */
-
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(25px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.focus-section .brand-container {
+    grid-template-columns: repeat(3, 1fr);
 }
 
-@keyframes lineGrow {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 100px;
-    }
-}
-
-/* =================================
-   7. TABLET AND MOBILE
-================================= */
-
-@media (max-width: 768px) {
-
-    .main-nav {
-        flex-wrap: nowrap;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .main-nav .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 250px;
-        background: #401522;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-        padding: 15px;
-        box-shadow: 0 8px 18px rgba(0,0,0,0.2);
-    }
-
-    .main-nav .nav-links.active {
-        display: flex;
-    }
-
-    .main-nav .nav-links a {
-        padding: 14px;
-        border-bottom: 1px solid rgba(255,255,255,0.12);
-    }
-
-    .main-nav .nav-links .nav-enquiry {
-        margin-top: 10px;
-        text-align: center;
-    }
-
-    .home-tagline {
-        letter-spacing: 3px;
-        font-size: 11px;
-    }
-
-    .home-content h1 {
-        font-size: 36px;
-    }
-
-    .home-content h2 {
-        font-size: 23px;
-    }
-
-    .brand-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .about-heading h1 {
-        font-size: 32px;
-    }
-}
-
-/* Small Mobile */
-
-@media (max-width: 500px) {
-
-    .brand-container {
-        grid-template-columns: 1fr;
-    }
-
-    .about-content {
-        padding: 25px 18px;
-    }
-}
-
-/* =================================
-   SERVICES PAGE
-================================= */
+/* =========================================
+   6. SERVICES PAGE
+========================================= */
 
 .services-section {
     padding: 70px 7%;
-    background: #fffaf3;
-}
-
-.page-heading {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.page-heading h1 {
-    font-family: Georgia, serif;
-    font-size: 42px;
-    color: #5b1825;
-    margin-bottom: 15px;
-}
-
-.page-heading p {
-    color: #b58a45;
-    font-size: 17px;
-    letter-spacing: 1px;
 }
 
 .services-container {
-    max-width: 1150px;
-    margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
+    max-width: 1150px;
+    margin: auto;
 }
 
 .service-card {
-    background: white;
-    padding: 35px 25px;
-    text-align: center;
-    border-radius: 10px;
+    border-radius: 8px;
+    overflow: hidden;
     border-bottom: 4px solid #c5a15b;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
-    transition: 0.3s ease;
 }
 
 .service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(91,24,37,0.15);
+    transform: translateY(-7px);
+}
+
+.service-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+}
+
+.service-card-content {
+    padding: 20px;
 }
 
 .service-card h3 {
-    color: #641f30;
+    color: #641d2d;
     font-family: Georgia, serif;
-    font-size: 20px;
-    margin-bottom: 15px;
+    font-size: 19px;
+    margin-bottom: 12px;
 }
 
 .service-card p {
     color: #666;
-    line-height: 1.8;
     font-size: 14px;
+    line-height: 1.7;
 }
 
 .service-note {
-    max-width: 850px;
-    margin: 40px auto;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 16px;
     text-align: center;
-    color: #777;
+    background: #f4ead9;
+    color: #641d2d;
+    border-left: 3px solid #c49a45;
     line-height: 1.7;
-    font-size: 14px;
 }
 
 .service-formats {
-    margin-top: 70px;
+    padding: 45px 7%;
     text-align: center;
 }
 
 .service-formats h2 {
-    color: #5b1825;
-    font-family: Georgia, serif;
-    font-size: 30px;
-    margin-bottom: 35px;
+    color: #641d2d;
+    font-size: 28px;
+    margin-bottom: 30px;
 }
 
 .formats-container {
-    max-width: 1000px;
-    margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    gap: 22px;
+    max-width: 1100px;
+    margin: auto;
 }
 
 .format-card {
-    background: #f3e9df;
-    padding: 30px 20px;
-    border-radius: 10px;
+    background: #fff;
+    padding: 25px 20px;
+    text-align: center;
+    border-bottom: 3px solid #c49a45;
+    border-radius: 6px;
     transition: 0.3s;
 }
 
 .format-card:hover {
-    transform: translateY(-6px);
-    background: #eee0d0;
+    transform: translateY(-4px);
 }
 
 .format-card h3 {
-    color: #641f30;
+    color: #641d2d;
     margin-bottom: 12px;
 }
 
 .format-card p {
     color: #666;
-    line-height: 1.7;
     font-size: 14px;
+    line-height: 1.7;
 }
 
-/* Services Responsive Design */
-
-@media (max-width: 768px) {
-    .services-container,
-    .formats-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .page-heading h1 {
-        font-size: 34px;
-    }
-}
-
-@media (max-width: 500px) {
-    .services-container,
-    .formats-container {
-        grid-template-columns: 1fr;
-    }
-
-    .services-section {
-        padding: 45px 20px;
-    }
-
-    .page-heading h1 {
-        font-size: 30px;
-    }
-}
-
-/* =================================
-   MENU PAGE
-================================= */
+/* =========================================
+   7. MENU PAGE
+========================================= */
 
 .menu-section {
     padding: 70px 7%;
-    background: #fffaf3;
     min-height: 80vh;
 }
 
@@ -600,23 +1181,27 @@ footer {
 }
 
 .menu-card {
-    background: white;
     padding: 35px 25px;
     text-align: center;
     border-radius: 12px;
     border-bottom: 4px solid #c5a15b;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
-    transition: 0.3s ease;
+    min-height: 220px;
 }
 
 .menu-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(91,24,37,0.15);
 }
 
 .menu-icon {
-    font-size: 38px;
-    margin-bottom: 18px;
+    font-size: 42px;
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f4ead9;
+    border-radius: 50%;
 }
 
 .menu-card h2 {
@@ -640,31 +1225,12 @@ footer {
     line-height: 1.7;
 }
 
-/* Menu Responsive Design */
-
-@media (max-width: 768px) {
-    .menu-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 500px) {
-    .menu-container {
-        grid-template-columns: 1fr;
-    }
-
-    .menu-section {
-        padding: 45px 20px;
-    }
-}
-
-/* =================================
-   CONTACT PAGE
-================================= */
+/* =========================================
+   8. CONTACT PAGE
+========================================= */
 
 .contact-section {
     padding: 70px 7%;
-    background: #fffaf3;
     min-height: 80vh;
 }
 
@@ -677,18 +1243,14 @@ footer {
 }
 
 .contact-card {
-    background: white;
     padding: 35px 25px;
     text-align: center;
     border-radius: 12px;
     border-bottom: 4px solid #c5a15b;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
-    transition: 0.3s ease;
 }
 
 .contact-card:hover {
     transform: translateY(-7px);
-    box-shadow: 0 12px 25px rgba(91,24,37,0.15);
 }
 
 .contact-icon {
@@ -727,7 +1289,7 @@ footer {
 .service-location {
     margin: 55px auto 0;
     text-align: center;
-    background: #f3e9df;
+    background: rgba(255,255,255,0.9);
     padding: 30px 20px;
     border-radius: 10px;
     max-width: 900px;
@@ -735,44 +1297,23 @@ footer {
 
 .service-location h2 {
     color: #641f30;
-    font-family: Georgia, serif;
     margin-bottom: 15px;
 }
 
-.service-location p {
-    color: #666;
-    line-height: 1.8;
-}
-
-/* Contact Responsive Design */
-
-@media (max-width: 600px) {
-    .contact-container {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-section {
-        padding: 45px 20px;
-    }
-}
-
-/* =================================
-   ENQUIRY PAGE
-================================= */
+/* =========================================
+   9. ENQUIRY PAGE
+========================================= */
 
 .enquiry-section {
     padding: 70px 7%;
-    background: #fffaf3;
     min-height: 85vh;
 }
 
 .enquiry-container {
     max-width: 850px;
     margin: auto;
-    background: white;
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
     border-top: 4px solid #c5a15b;
 }
 
@@ -843,11 +1384,176 @@ footer {
     transform: translateY(-3px);
 }
 
-/* Enquiry Responsive Design */
+/* =========================================
+   10. FOOTER
+========================================= */
 
-@media (max-width: 600px) {
+footer {
+    background: #3d101a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* =========================================
+   11. ANIMATIONS
+========================================= */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================
+   12. RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 900px) {
+
+    .brand-container,
+    .services-container,
+    .menu-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .focus-section .brand-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .formats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .main-nav {
+        padding: 15px 5%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-nav .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 250px;
+        background: #401522;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 15px;
+        box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+    }
+
+    .main-nav .nav-links.active {
+        display: flex;
+    }
+
+    .main-nav .nav-links a {
+        padding: 14px;
+        border-bottom: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .main-nav .nav-links .nav-enquiry {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .home-section {
+        min-height: 80vh;
+    }
+
+    .home-tagline {
+        letter-spacing: 3px;
+        font-size: 11px;
+    }
+
+    .home-content h1 {
+        font-size: 36px;
+    }
+
+    .home-content h2 {
+        font-size: 23px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .about-image,
+    .about-text {
+        width: 100%;
+    }
+
+    .about-image img {
+        height: 260px;
+    }
+
+    .page-heading h1,
+    .about-heading h1 {
+        font-size: 32px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .brand-container,
+    .focus-section .brand-container,
+    .services-container,
+    .formats-container,
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-section,
+    .brand-section,
+    .services-section,
+    .menu-section,
+    .contact-section,
     .enquiry-section {
-        padding: 45px 18px;
+        padding: 40px 18px;
+    }
+
+    .about-content {
+        padding: 25px 18px;
+    }
+
+    .about-image img {
+        height: 220px;
+    }
+
+    .home-content h1 {
+        font-size: 32px;
+    }
+
+    .home-content h2 {
+        font-size: 21px;
+    }
+
+    .home-content p {
+        font-size: 14px;
+    }
+
+    .page-heading h1,
+    .about-heading h1 {
+        font-size: 29px;
     }
 
     .enquiry-container {
@@ -863,434 +1569,69 @@ footer {
         grid-column: 1;
     }
 }
-/* ------------------------------------------------ */
 
-/* ABOUT PAGE */
-
-.about-section {
-    padding: 45px 7%;
-    background: #fffaf2;
-}
-
-.about-heading,
-.section-heading {
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-.about-heading h1 {
-    color: #641d2d;
-    font-size: 34px;
-    margin-bottom: 12px;
-}
-
-.about-heading p {
-    color: #666;
-    margin-top: 12px;
-}
-
-.gold-line {
-    width: 65px;
-    height: 3px;
-    background: #c49a45;
-    margin: 0 auto;
-}
-
-.about-content {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    max-width: 1150px;
-    margin: auto;
-}
-
-.about-image {
-    flex: 1;
-}
-
-.about-image img {
-    width: 100%;
-    height: 340px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.about-text {
-    flex: 1;
-}
-
-.about-text h2 {
-    color: #641d2d;
-    font-size: 25px;
-    margin-bottom: 18px;
-}
-
-.about-text p {
-    color: #555;
-    line-height: 1.8;
-    margin-bottom: 15px;
-}
-
-.locations {
-    margin-top: 22px;
-    padding: 17px;
-    background: #f4ead9;
-    border-left: 3px solid #c49a45;
-}
-
-.locations h3 {
-    color: #641d2d;
-    margin-bottom: 8px;
-}
-
-.locations p {
-    margin-bottom: 0;
-}
-
-/* WHO WE SERVE */
-
-.brand-section,
-.focus-section {
-    padding: 45px 7%;
-    background: #fff;
-}
-
-.focus-section {
-    background: #fffaf2;
-}
-
-.section-heading h2 {
-    color: #641d2d;
-    font-size: 28px;
-    margin-bottom: 12px;
-}
-
-.brand-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    max-width: 1150px;
-    margin: auto;
-}
-
-.brand-card {
-    background: #fff;
-    padding: 25px 18px;
-    text-align: center;
-    border-bottom: 3px solid #c49a45;
-    border-radius: 6px;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
-    transition: 0.3s;
-}
-
-.brand-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.10);
-}
-
-.brand-card h3 {
-    color: #641d2d;
-    font-size: 18px;
-    margin-bottom: 12px;
-}
-
-.brand-card p {
-    color: #666;
-    line-height: 1.6;
-    font-size: 14px;
-}
-
-/* BRAND FOCUS - THREE CARDS */
-
-.focus-section .brand-container {
-    grid-template-columns: repeat(3, 1fr);
-}
-
-/* MOBILE RESPONSIVE */
-
-@media (max-width: 900px) {
-    .brand-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
+/* Disable fixed background on small screens */
 
 @media (max-width: 768px) {
-    .about-content {
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .about-image,
-    .about-text {
-        width: 100%;
-    }
-
-    .about-image img {
-        height: 260px;
-    }
-
-    .about-heading h1 {
-        font-size: 28px;
-    }
-
-    .about-text h2 {
-        font-size: 22px;
-    }
-}
-
-@media (max-width: 500px) {
     .about-section,
     .brand-section,
-    .focus-section {
-        padding: 35px 5%;
-    }
-
-    .brand-container,
-    .focus-section .brand-container {
-        grid-template-columns: 1fr;
-    }
-
-    .about-image img {
-        height: 220px;
-    }
-}
-
-
-/* SERVICES PAGE */
-
-.services-section {
-    padding: 45px 7%;
-    background: #fffaf2;
-}
-
-.services-section .page-heading {
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-.services-section .page-heading h1 {
-    color: #641d2d;
-    font-size: 34px;
-    margin-bottom: 12px;
-}
-
-.services-section .page-heading p {
-    color: #666;
-    margin-top: 12px;
-}
-
-/* SERVICE CARDS */
-
-.services-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    max-width: 1150px;
-    margin: auto;
-}
-
-.service-card {
-    background: #fff;
-    border-radius: 7px;
-    overflow: hidden;
-    border-bottom: 3px solid #c49a45;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
-    transition: 0.3s;
-}
-
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.10);
-}
-
-.service-card img {
-    width: 100%;
-    height: 190px;
-    object-fit: cover;
-    display: block;
-}
-
-.service-card-content {
-    padding: 20px;
-}
-
-.service-card h3 {
-    color: #641d2d;
-    font-size: 19px;
-    margin-bottom: 12px;
-}
-
-.service-card p {
-    color: #666;
-    font-size: 14px;
-    line-height: 1.7;
-}
-
-/* SERVICE NOTE */
-
-.service-note {
-    max-width: 900px;
-    margin: 30px auto 0;
-    padding: 16px;
-    text-align: center;
-    background: #f4ead9;
-    color: #641d2d;
-    border-left: 3px solid #c49a45;
-    line-height: 1.7;
-}
-
-/* CATERING FORMATS */
-
-.service-formats {
-    padding: 45px 7%;
-    background: #fff;
-}
-
-.formats-heading {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.formats-heading h2 {
-    color: #641d2d;
-    font-size: 28px;
-    margin-bottom: 12px;
-}
-
-.formats-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-    max-width: 1100px;
-    margin: auto;
-}
-
-.format-card {
-    background: #fffaf2;
-    padding: 25px 20px;
-    text-align: center;
-    border-bottom: 3px solid #c49a45;
-    border-radius: 6px;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
-    transition: 0.3s;
-}
-
-.format-card:hover {
-    transform: translateY(-4px);
-}
-
-.format-card h3 {
-    color: #641d2d;
-    margin-bottom: 12px;
-}
-
-.format-card p {
-    color: #666;
-    font-size: 14px;
-    line-height: 1.7;
-}
-
-/* RESPONSIVE DESIGN */
-
-@media (max-width: 900px) {
-    .services-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
     .services-section,
-    .service-formats {
-        padding: 35px 5%;
+    .service-formats,
+    .menu-section,
+    .contact-section,
+    .enquiry-section {
+        background-attachment: scroll;
     }
-
-    .services-section .page-heading h1 {
-        font-size: 28px;
-    }
-
-    .service-card img {
-        height: 170px;
-    }
-}
-
-@media (max-width: 550px) {
-    .services-container,
-    .formats-container {
-        grid-template-columns: 1fr;
-    }
-
-    .service-card img {
-        height: 210px;
-    }
-}
-
-
-.menu-icon {
-    font-size: 42px;
-    width: 75px;
-    height: 75px;
-    margin: 25px auto 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #f4ead9;
-    border-radius: 50%;
-}
-
-.menu-card {
-    text-align: center;
-    min-height: 220px;
 }
 
 /* =================================
-   COMMON BACKGROUND IMAGE
-   ABOUT, SERVICES, MENU, CONTACT, ENQUIRY
+   COMMON BACKGROUND FOR ALL PAGES
 ================================= */
 
 body {
     background:
         linear-gradient(
-            rgba(255, 250, 242, 0.40),
-            rgba(255, 250, 242, 0.40)
+            rgba(255, 250, 242, 0.60),
+            rgba(255, 250, 242, 0.60)
         ),
-        url("images/catering.jpg");
+        url("https://static.vecteezy.com/system/resources/thumbnails/047/908/776/small_2x/catering-food-buffet-display-on-table-in-restaurant-photo.jpg");
 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-color: #fffaf3;
 }
 
-/* Page backgrounds */
+/* All page sections */
 
 .about-section,
 .services-section,
 .menu-section,
 .contact-section,
-.enquiry-section {
-    background: rgba(255, 250, 242, 0.72);
-}
-
-/* About page sections */
-
+.enquiry-section,
 .brand-section,
-.focus-section {
-    background: rgba(255, 250, 242, 0.72);
-}
-
-/* Services formats section */
-
+.focus-section,
 .service-formats {
-    background: rgba(255, 250, 242, 0.72);
+    background: transparent;
 }
 
-/* Keep cards white */
+/* Cards */
 
 .about-content,
 .brand-card,
 .service-card,
 .menu-card,
 .contact-card,
-.enquiry-container {
-    background-color: #fff;
+.enquiry-container,
+.format-card {
+    background: rgba(255, 255, 255, 0.50);
+}
+
+/* Mobile background */
+
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+    }
 }
